@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.camera {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo para la cámara */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Para que el video no se salga del borde redondeado */
+  background-color: #000; /* Fondo negro para el video */
+}
+
+.camera video {
+  width: 100%;
+  height: auto;
+  display: block; /* Elimina espacios extra debajo del video */
+}
+
+.camera button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.camera button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  display: flex; /* Para organizar los botones al lado de la imagen */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #333;
+  display: none; /* Oculto por defecto */
+}
+
+.result.hasPhoto {
+  display: flex; /* Se muestra cuando hay una foto */
+}
+
+.result canvas {
+  max-width: 100%; /* Asegura que el canvas no se desborde */
+  height: auto;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.result button {
+  padding: 8px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545; /* Color para borrar */
+  color: white;
+  margin-left: 5px; /* Espacio entre los botones */
+}
+
+.result button:last-child {
+  background-color: #28a745; /* Color para identificar */
+}
+
+.result button:hover {
+  opacity: 0.9;
+}
